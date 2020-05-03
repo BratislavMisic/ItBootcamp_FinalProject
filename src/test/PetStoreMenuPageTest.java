@@ -60,23 +60,19 @@ public class PetStoreMenuPageTest {
 		sa.assertTrue(psmp.photoMenuLinksActive());
 		sa.assertTrue(psmp.headMenuLinksActive());
 		
-		sa.assertTrue(psmp.leftNavBarLinksPath());
-		sa.assertTrue(psmp.topMenuLinksPath());
-		sa.assertTrue(psmp.photoMenuLinksPath());
-		sa.assertTrue(psmp.signInButtonPath());
 	}
 	
-//	@Test
-//	public void validPathTest() {
-//		this.driver.navigate().to(this.locators.getProperty("menu_page_url"));
-//		SoftAssert sa1 = new SoftAssert();
-//		PetStoreMenuPage psmp1 = new PetStoreMenuPage(driver, locators, waiter);
-//		
-//		sa1.assertTrue(psmp1.leftNavBarLinksPath());
-//		sa1.assertTrue(psmp1.topMenuLinksPath());
-//		sa1.assertTrue(psmp1.photoMenuLinksPath());
-//		sa1.assertTrue(psmp1.signInButtonPath());
-//	}
+	@Test
+	public void validPathTest() {
+		this.driver.navigate().to(this.locators.getProperty("menu_page_url"));
+		SoftAssert sa1 = new SoftAssert();
+		PetStoreMenuPage psmp1 = new PetStoreMenuPage(driver, locators, waiter);
+		
+		sa1.assertTrue(psmp1.leftNavBarLinksPath());
+		sa1.assertTrue(psmp1.topMenuLinksPath());
+		sa1.assertTrue(psmp1.photoMenuLinksPath());
+		sa1.assertTrue(psmp1.signInButtonPath());
+	}
 	
 	@AfterClass
 	public void afterClass() {
